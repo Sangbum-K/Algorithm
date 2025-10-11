@@ -1,6 +1,8 @@
 text = input()
 
-text = text.replace(text[1],"a",1)
-text = text.replace(text[-2],"a",1)
+arr = list(text)
 
-print(text)
+arr[1] = 'a'
+arr[-2] = 'a'
+
+print("".join(arr))
