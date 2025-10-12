@@ -2,11 +2,15 @@ matrix = []
 for rep in range(2):
     row_list = []
     for row in range(3):
+        
         col_list = list(map(int,input().split())) 
         row_list.append(col_list)
-    
+
     matrix.append(row_list)
-    input()
+
+    if rep == 0:
+        input()
+
     
 
 
