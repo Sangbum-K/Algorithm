@@ -1,4 +1,8 @@
+import math as math
+
+pi = math.pi
+
 print("""Total days in Year
 365
-Cicumference rate
-3.1415926535""")
+Cicumference rate""")
+print(pi)
