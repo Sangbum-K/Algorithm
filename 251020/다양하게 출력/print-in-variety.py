@@ -1,8 +1,4 @@
-import math as math
-
-pi = math.pi
-
 print("""Total days in Year
 365
-Cicumference rate""")
-print(pi)
+Circumference rate
+3.1415926535""")
