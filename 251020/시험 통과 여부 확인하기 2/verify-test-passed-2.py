@@ -6,7 +6,7 @@ for i in range(n):
 
 cnt = 0
 for evg in arr:
-    if(sum(evg)/4 > 60):
+    if(sum(evg)/4 >= 60):
         print("pass")
         cnt+= 1
     else:
