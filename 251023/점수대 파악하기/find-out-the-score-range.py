@@ -1,4 +1,11 @@
-arr = list(map(int,input().split()))
+l = list(map(int,input().split()))
+
+i = 0
+arr = []
+while l[i] != 0:
+    arr.append(l[i])
+    i += 1
+
 
 
 for i in range(10,0,-1):
