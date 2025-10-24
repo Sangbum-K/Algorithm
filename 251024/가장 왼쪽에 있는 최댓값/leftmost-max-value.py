@@ -1,7 +1,7 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-idx = 6
+idx = len(arr) + 1
 
 while 1:
     mx = -1
