@@ -1,26 +1,25 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-idx = len(arr) + 1
-
+idx = len(arr)
 while 1:
-    mx = -1
- 
-    for i in range(idx - 1):
-        if mx < arr [i]:
-            mx = arr[i]
-    
-    for i in range(idx - 1):
-        if mx  == arr[i]:
-            idx = i
-            break
+    arr_2 = []
+    for i in range(0,idx):
+        arr_2.append(arr[i])
 
-    print(idx+1, end = ' ')
+    mx = max(arr_2)
 
-    if idx+1 == 1:
-        break
 
-    elif idx == 1:
+    idx = arr_2.index(mx)
+
+    if (idx + 1 == 1):
         print('1')
         break
-        
+    
+    print(idx + 1, end = " ")
+
+
+
+
+
+    
