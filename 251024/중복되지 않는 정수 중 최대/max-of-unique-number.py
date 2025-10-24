@@ -10,7 +10,7 @@ while 1:
         if mx == i :
             cnt += 1
 
-    if cnt == len(arr) :
+    if cnt == len(arr) and cnt != 1 :
         print('-1')
         break
         
