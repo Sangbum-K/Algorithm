@@ -4,8 +4,8 @@ total = 0
 for i in arr:
     total += sum(i)
     sum_r = sum(i)
-    avg = sum_r / 4
-    print(avg, end = " ")
+    avg_l = sum_r / 4
+    print(avg_l, end = " ")
 
 print()
 
@@ -17,5 +17,6 @@ for i in range(4):
     print(avg_c, end = " ")
 print()
     
-print(total/8)
+avg = total/8
+print(f"{avg:.1f}")
         
