@@ -29,9 +29,6 @@ if m == 1 and n!= 1:
             arr[i][j] = cnt
             break
 
-    
-
-
 
 if n>= 2 and m>= 2 :
 
@@ -40,17 +37,16 @@ if n>= 2 and m>= 2 :
     r = 1
 
     while 1:
-
         arr[i][j] = cnt
-    
 
         i += 1
         j -= 1
 
         cnt += 1
-
+    
         if j == 0 or i == n - 1:
             arr[i][j] = cnt
+
             i = 0
             r += 1
             j = r
@@ -65,6 +61,10 @@ if n>= 2 and m>= 2 :
     d = 1
 
     while 1:
+        if i == n-1:
+                arr[n-1][m-1] = cnt
+                break
+        
         arr[i][j] = cnt
 
         i += 1
