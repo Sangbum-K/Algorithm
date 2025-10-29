@@ -4,12 +4,41 @@ arr = [[0 for j in range (m)] for i in range(n)]
 
 arr[0][0] = 1
 
-i,j = 0,1
-cnt = 2
 
-r = 1
+i,j = 0,0
+cnt = 1
+
+if n == 1 and m != 1:
+    while 1:
+        arr[i][j] = cnt
+        j += 1
+        cnt+=1
+        if j == m-1:
+            arr[i][j] = cnt
+            break
+
+
+
+
+if m == 1 and n!= 1:
+    while 1:
+        arr[i][j] = cnt
+        i += 1
+        cnt+=1
+        if i == n-1:
+            arr[i][j] = cnt
+            break
+
+    
+
+
 
 if n>= 2 and m>= 2 :
+
+    i,j = 0,1
+    cnt = 2
+    r = 1
+
     while 1:
 
         arr[i][j] = cnt
