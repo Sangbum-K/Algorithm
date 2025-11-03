@@ -16,14 +16,8 @@ else:
             w = arr[i]
             answer.append(w)
 
-            if cnt >= 10:
-                s = cnt // 10
-                r = cnt % 10
-                answer.append(s)
-                answer.append(r)
-            
-            else:
-                answer.append(cnt)
+            for c in str(cnt):
+                answer.append(c)
 
             cnt = 1
             idx = i
@@ -35,14 +29,8 @@ else:
     answer.append(w)
 
     
-    if cnt >= 10:
-        s = cnt // 10
-        r = cnt % 10
-        answer.append(s)
-        answer.append(r)
-            
-    else:
-         answer.append(cnt)
+    for c in str(cnt):
+        answer.append(c)
 
 
 
