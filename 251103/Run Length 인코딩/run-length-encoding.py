@@ -33,7 +33,8 @@ else:
 
     w = arr[idx+1]
     answer.append(w)
-    cnt = int(len(arr) - idx - 1)
+
+    
     if cnt >= 10:
         s = cnt // 10
         r = cnt % 10
@@ -44,9 +45,6 @@ else:
          answer.append(cnt)
 
 
-
-
-    
 
 
 print(len(answer))
