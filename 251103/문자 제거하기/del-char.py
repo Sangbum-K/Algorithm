@@ -8,14 +8,17 @@ while 1:
         arr.pop(-1)
         print("".join(arr))
         break
-        
-    elif n < len(arr):
-        arr.pop(n)
-        print("".join(arr))
     
-    elif n > len(arr):
-        arr.pop(-1)
-        print("".join(arr))
+    else:
+        if n < len(arr):
+            arr.pop(n)
+            print("".join(arr))
+    
+        else :
+            arr.pop(-1)
+            print("".join(arr))
+
+    
     
     
 
