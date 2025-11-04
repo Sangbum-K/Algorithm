@@ -6,5 +6,5 @@ def printstr(r,c):
             print('1',end = "")
         print()
 
-printstr(2,3)
+printstr(n,m)
 
