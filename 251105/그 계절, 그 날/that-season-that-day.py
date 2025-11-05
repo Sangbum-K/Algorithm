@@ -13,7 +13,7 @@ def year(n):
         return False
 
 def fcn(m,d,y):
-    m1 = [1,3,5,7,9,8,10,12]
+    m1 = [1,3,5,7,8,10,12]
     m2 = [4,6,8,9,11]
 
     if m in m1:
