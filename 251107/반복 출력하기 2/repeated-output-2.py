@@ -6,5 +6,5 @@ def printhw(n):
         return
     printhw(n-1)
 
-printhw(4)
+printhw(n)
     
