@@ -12,6 +12,8 @@ def gcd(x,y):
 
 def lcm(arr,n):
     if n == 2:
+        d = gcd(int(arr[n-1]),int(arr[n-2]))
+        arr[n-1] = arr[n-2]*arr[n-1]/d
         return int(arr[n-1])
 
     d = gcd(int(arr[n-1]),int(arr[n-2]))
