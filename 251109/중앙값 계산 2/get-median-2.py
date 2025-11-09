@@ -1,8 +1,14 @@
 n = int(input())
 arr = list(map(int, input().split()))
+answer = []
 
-arr.sort()
 
-for i in range(1,n+1):
-    if i % 2 == 1:
-        print(arr[(i//2 + 1)-1],end = " ")
+
+
+for i in range(n):
+    answer.append(arr[i])
+    if i % 2 == 0:
+        tmp = sorted(answer)
+        print(tmp[i // 2], end = " ")
+
+    
