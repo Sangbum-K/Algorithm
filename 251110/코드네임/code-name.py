@@ -22,6 +22,7 @@ idx = 0
 
 for i in range(len(agents)):
     if agents[i].score < mn:
+        mn = agents[i].score
         idx = i
 
 
