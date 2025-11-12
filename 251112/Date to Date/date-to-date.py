@@ -12,8 +12,11 @@ sumd2 = d2
 for i in range(m2+1):
     sumd2+=num_of_days[i]
 
+
 elapsed_days = sumd2 - sumd1 
 if m1 == m2:
+    elapsed_days += 1
+if d1 > d2:
     elapsed_days += 1
 
 print(elapsed_days)
