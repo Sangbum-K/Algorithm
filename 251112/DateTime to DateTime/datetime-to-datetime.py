@@ -1,5 +1,8 @@
 a, b, c = map(int, input().split())
 
+diff_day = a-11
+
+
 diff_hour = b-11
 if diff_hour < 0:
     diff_hour = 24+b-11
@@ -11,7 +14,10 @@ if diff_min < 0:
     diff_hour -= 1
 
 
-diff_day = a-11
+
 
 diff_time = diff_day*24*60+diff_hour*60+diff_min
+
+if diff_time < 0:
+    diff_time = -1
 print(diff_time)
