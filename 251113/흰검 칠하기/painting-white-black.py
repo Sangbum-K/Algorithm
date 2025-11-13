@@ -26,7 +26,8 @@ for c in commands:
         plus += c.l 
 
 
-checked = [['B',0] for _ in range(minus+plus+1)]
+checked = [[] for _ in range(minus+plus)]
+
 
 
 i = minus
@@ -36,39 +37,38 @@ for c in commands:
     if c.d == 'L':
         for j in range(c.l):
             if j == c.l -1 :
-                checked[i][0] = 'W'
-                checked[i][1] += 1
+                checked[i].append('W')
                 break
 
-            checked[i][0] = 'W'
-            checked[i][1] += 1
+            checked[i].append('W')
             i -= 1
             
     else:
         for j in range(c.l):
             if j == c.l -1 :
-                checked[i][0] = 'B'
-                checked[i][1] += 1
+                checked[i].append('B')
                 break
-            checked[i][0] = 'B'
-            checked[i][1] += 1
+            checked[i].append('B')
             i += 1
+
 
 
 white,black,gray = 0,0,0
 
 for check in checked:
-    if  check[1]>= 4:
+
+    
+    if  check.count('B') >= 2 and check.count('W') >= 2:
         gray += 1
     
-    elif check[1] >=1 and check[1] < 4:
-        if check[0] == 'B':
-            
+    elif check != []:
+        if check[-1] == 'B':
+
             black +=1
 
-        elif check[0] == 'W':
-
+        elif check[-1] == 'W':
             white +=1
 
 print(white,black,gray)
+
 
