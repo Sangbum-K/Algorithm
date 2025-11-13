@@ -26,11 +26,11 @@ for c in commands:
         plus += c.l 
 
 
-checked = [[] for _ in range(minus+plus)]
+checked = [[] for _ in range(200000)]
 
 
 
-i = minus
+i = 100000
 
 
 for c in commands:
