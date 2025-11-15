@@ -17,25 +17,17 @@ for num in range(2):
             matrix[i][j] = 1-num
 
 size =0
-l = []
+mx = (0,0)
+mn = (2000,2000)
 for i in range(2000):
     for j in range(2000):
         if matrix[i][j] >= 1:
-            l.append((i,j))
+            if (i,j) > mx:
+                mx = (i,j)
 
-if l == []:
-    print('0')
-    
+            if (i,j) < mn:
+                mn = (i,j)
 
-else:
-    mx = max(l)
-
-    mn = min(l)
-
-    size = (mx[0]-mn[0]+1) * (mx[1]-mn[1]+1)
-    print(size)
-
-
-
-
+size = (mx[0]-mn[0]+1) * (mx[1]-mn[1]+1)
+print(size)
 
