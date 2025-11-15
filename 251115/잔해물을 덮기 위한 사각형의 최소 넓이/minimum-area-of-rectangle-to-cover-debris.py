@@ -23,13 +23,19 @@ for i in range(2000):
         if matrix[i][j] >= 1:
             l.append((i,j))
 
-     
-mx = max(l)
+if l == []:
+    print('0')
+    
 
-mn = min(l)
+else:
+    mx = max(l)
 
-size = (mx[0]-mn[0]+1) * (mx[1]-mn[1]+1)
-print(size)
+    mn = min(l)
+
+    size = (mx[0]-mn[0]+1) * (mx[1]-mn[1]+1)
+    print(size)
+
+
 
 
 
