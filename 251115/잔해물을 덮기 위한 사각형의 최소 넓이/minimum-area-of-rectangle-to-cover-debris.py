@@ -2,10 +2,10 @@ x1, y1, x2, y2 = [], [], [], []
 
 for _ in range(2):
     a, b, c, d = map(int, input().split())
-    x1.append(a)
-    y1.append(b)
-    x2.append(c)
-    y2.append(d)
+    x1.append(a+1000)
+    y1.append(b+1000)
+    x2.append(c+1000)
+    y2.append(d+1000)
 
 
 
