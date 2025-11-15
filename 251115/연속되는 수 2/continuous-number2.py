@@ -11,5 +11,7 @@ for i in range(n-1):
         if mx < cnt:
             mx = cnt
         
-
-print(mx)
+if cnt == 1:
+    print('1')
+else:
+    print(mx)
