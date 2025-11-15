@@ -17,17 +17,39 @@ for num in range(2):
             matrix[i][j] = 1-num
 
 size =0
-mx = (0,0)
-mn = (2000,2000)
+
+mx_i = 0
+mx_j = 0
+
+mn_i = 2000
+mn_j = 2000
+
+cnt = 0
+
 for i in range(2000):
     for j in range(2000):
         if matrix[i][j] >= 1:
-            if (i,j) > mx:
-                mx = (i,j)
+            cnt += 1
 
-            if (i,j) < mn:
-                mn = (i,j)
+            if i > mx_i:
+                mx_i = i
+            if i < mn_i:
+                mn_i = i
 
-size = (mx[0]-mn[0]+1) * (mx[1]-mn[1]+1)
-print(size)
+            if j > mx_j:
+                mx_j = j
+            if j < mn_j:
+                mn_j = j
+
+if cnt == 0:
+    print('0')
+
+else:
+
+    size = (mx_i-mn_i+1) * (mx_j-mn_j+1)
+    print(size)
+
+
+
+
 
