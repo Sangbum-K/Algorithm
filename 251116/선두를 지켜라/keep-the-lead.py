@@ -46,9 +46,7 @@ for i in range(len(positionA)):
         first.append("B")
     
 cnt = 0
-print(positionA)
-print(positionB)
-print(first)
+
 
 for i in range(len(positionA) - 1):
     if first[i] != first[i+1]:
