@@ -46,12 +46,14 @@ for i in range(m):
             time += 1
 
 idx = 0
-for i in range(1000):
+for i in range(len(positionA)):
     if positionA[i] == positionB[i]:
-        idx = i
+        idx = i + 1
         break
+
     else:
         idx = -1
 
-print(idx+1)
+
+print(idx)
 
