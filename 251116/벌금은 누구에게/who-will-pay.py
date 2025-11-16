@@ -10,7 +10,7 @@ for s in student:
     else:
         students.append(-1)
 
-print(students)
+
 
 if students[-1] == -1:
     print('-1')
