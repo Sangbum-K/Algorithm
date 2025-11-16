@@ -4,11 +4,13 @@ student = [int(input()) for _ in range(M)]
 students = []
 for s in student:
     students.append(s)
-    if students.count(s) >= 3:
+    if students.count(s) >= K:
         print(s)
         break
     else:
         students.append(-1)
+
+print(students)
 
 if students[-1] == -1:
     print('-1')
