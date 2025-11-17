@@ -50,9 +50,6 @@ for i in range(len(positionA)):
     
 cnt = 1
 
-print(positionA)
-print(positionB)
-print(first)
 
 
 for i in range(len(positionA) - 1):
