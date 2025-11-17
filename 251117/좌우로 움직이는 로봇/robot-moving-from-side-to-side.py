@@ -17,8 +17,8 @@ for _ in range(m):
     d_b.append(direction)
 
 
-positionA = []
-positionB = []
+positionA = [(0,'')]
+positionB = [(0,'')]
 
 p = 0
 direc = ''
@@ -64,8 +64,16 @@ else:
 
 
 for i in range(len(positionA)):
-    if positionA[i][0] == positionB[i][0] and positionA[i][1] != positionB[i][1]:
-        cnt+= 1
+    if i == 0:
+        if positionA[i][0] == positionB[i][0] and positionA[i][1] != positionB[i][1] :
+            cnt+= 1
+    
+    else:
+        if positionA[i][0] == positionB[i][0] and positionA[i-1][0] != positionB[i-1][0]:
+            cnt += 1
+
+
+
 
 
 print(cnt)
