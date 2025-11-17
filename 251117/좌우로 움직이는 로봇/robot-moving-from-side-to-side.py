@@ -1,81 +1,70 @@
 n, m = map(int, input().split())
 
-# Process robot A's movements
-t = []
-d = []
+A = []
 for _ in range(n):
     time, direction = input().split()
-    t.append(int(time))
-    d.append(direction)
+    A.append([int(time),direction])
 
-# Process robot B's movements
-t_b = []
-d_b = []
+B = []
 for _ in range(m):
     time, direction = input().split()
-    t_b.append(int(time))
-    d_b.append(direction)
+    B.append([int(time),direction])
+
+posA = 0
+posB = 0
 
 
-positionA = [(0,'')]
-positionB = [(0,'')]
-
-p = 0
-direc = ''
-for i in range(n):
-    for j in range(t[i]):
-        if d[i] == 'R':
-            p += 1
-            direc = '+'
-            positionA.append((p,direc))
-
-        else:
-            p -= 1
-            direc = '-'
-            positionA.append((p,direc))
+iA = 0
+iB = 0
 
 
-p = 0
-direc = ''
+remainA = A[0][0]
+remainB = B[0][0]
 
-for i in range(m):
-    for j in range(t_b[i]):
-        if d_b[i] == 'R':
-            p += 1
-            direc = '+'
-            positionB.append((p,direc))
-
-        else:
-            p -= 1
-            direc = '-'
-            positionB.append((p,direc))
-
+dirA = A[0][1]
+dirB = B[0][1]
 
 cnt = 0
-if len(positionA) > len(positionB):
-    for i in range(len(positionA) - len(positionB )):
-        positionB.append(positionB[-1])
 
-    
+while True:
+    prevA = posA
+    prevB = posB
 
-else:
-    for i in range(len(positionB) - len(positionA)):
-        positionA.append(positionA[-1])
+    if iA < n:
 
+        if dirA == 'R':
+            posA += 1
+        else:
+            posA -= 1
 
-for i in range(len(positionA)):
-    if i == 0:
-        if positionA[i][0] == positionB[i][0] and positionA[i][1] != positionB[i][1] :
-            cnt+= 1
-    
-    else:
-        if positionA[i][0] == positionB[i][0] and positionA[i-1][0] != positionB[i-1][0]:
-            cnt += 1
+        remainA -= 1
 
+        if remainA == 0:
+            iA += 1
+            if iA < n:
+                remainA = A[iA][0]
+                dirA = A[iA][1]
 
+    if iB < m:
+        if dirB == 'R':
+            posB += 1
+        else:
+            posB -= 1
+
+        remainB -= 1
+
+        if remainB == 0:
+            iB += 1
+            if iB < m:
+                remainB = B[iB][0]
+                dirB = B[iB][1]
+
+    if iA >= n and iB >= m:
+        break
+
+    if prevA != prevB and posA == posB:
+        cnt += 1
 
 
 
 print(cnt)
-
-
