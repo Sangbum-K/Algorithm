@@ -8,10 +8,10 @@ infected = [P]
 for h in handshakes:
     if h[1] in infected or h[2] in infected:
         if h[1] in infected and h[2] in infected:
-            if infected.count(h1) < 1 + K:
+            if infected.count(h[1]) < 1 + K:
                 infected.append(h[1])
 
-            if infected.cunt(h2) < 1 + K:
+            if infected.count(h[2]) < 1 + K:
                 infected.append(h[2])
 
         
