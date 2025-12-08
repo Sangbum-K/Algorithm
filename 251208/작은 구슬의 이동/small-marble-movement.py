@@ -26,7 +26,7 @@ for i in range(t):
         x,y = x + dxs[D], y + dys[D]
 
     else:
-        D = D%3
+        D = 3-D
 
     answer = (x+1,y+1)
 
