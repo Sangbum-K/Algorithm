@@ -13,7 +13,7 @@ def solve():
 
     for i in range(m):
         x,y = points[i][0] -1 , points[i][1]-1
-        arr[x][y]  = 1
+        arr[x][y] = 1
         cnt = 0
 
         for xp,yp in zip(dx,dy):
@@ -22,7 +22,7 @@ def solve():
             if in_range(tmpx,tmpy) and arr[tmpx][tmpy] == 1:
                 cnt += 1
             
-        if cnt >= 3:
+        if cnt == 3:
             print('1')
         else:
             print('0')
