@@ -33,18 +33,11 @@ def solve():
     while 1:
 
         if grid[x][y] == '\\':
-            
-            if d % 2 == 0:
-                d = 3
-            else:
-                d = 2
+            d = 3-d
 
             
         elif grid[x][y] == '/':
-            if d % 2 == 0:
-                d = 1
-            else:
-                d = 0
+            d = d ^ 1
 
         tmpx,tmpy = x + dx[d], y + dy[d]
 
@@ -53,7 +46,7 @@ def solve():
             x,y = tmpx,tmpy
 
         else:
-            return (cnt+1)
+            return (cnt)
 
             
 print(solve())
