@@ -12,9 +12,9 @@ def in_range(x,y):
     return 0 <= x and x < n and 0 <= y and y < n
 
 
-
 def solve():
     cnt = 1
+    x,y = 0,0
 
     d = (k-1) // 3
 
