@@ -16,7 +16,7 @@ def solve():
     cnt = 1
     x,y = 0,0
 
-    d = (k-1) // 3
+    d = (k - 1) // n
 
     if d == 0:
         x,y = 0,k-1
