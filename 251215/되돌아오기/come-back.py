@@ -6,8 +6,6 @@ dist = [int(move[1]) for move in moves]
 dx = [-1,0,1,0]
 dy = [0,1,0,-1]
 
-x,y = 0,0
-
 D = {
     'N' : 0,
     'E' : 1,
@@ -15,20 +13,25 @@ D = {
     'W' : 3
 }
 
-cnt = 0
-answer = 0
-for i in range(N):
-    d = dir[i]
-
-    for j in range(dist[i]):
-        cnt += 1
-        x = x + dx[D[d]]
-        y = y + dy[D[d]]
 
 
-        if x == 0 and y == 0:
-            answer = cnt
+def solve ():
+    cnt = 0
+    x,y = 0,0
+    for i in range(N):
+        d = dir[i]
 
-print(answer)
+        for j in range(dist[i]):
+            cnt += 1
+            x = x + dx[D[d]]
+            y = y + dy[D[d]]
+
+            if x == 0 and y == 0:
+                return cnt
+
+    
+    return -1
+
+print(solve())
 
 
