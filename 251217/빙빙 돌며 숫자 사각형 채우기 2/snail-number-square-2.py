@@ -7,7 +7,7 @@ dx = [1,0,-1,0]
 dy = [0,1,0,-1]
 
 def in_range(x,y):
-    return 0 <= x and x < m and 0 <= y and y < m
+    return 0 <= x and x < n and 0 <= y and y < m
 
 
 def solve():
@@ -22,7 +22,7 @@ def solve():
         tmpx = x +dx[d]
         tmpy = y +dy[d]
 
-        if in_range(tmpx,tmpy) and check[tmpx][tmpy] != 1:
+        if in_range(tmpx,tmpy) and check[tmpx][tmpy] == 0:
             x,y = tmpx,tmpy
 
         else:
