@@ -16,6 +16,17 @@ for i,j in zip(x,c):
 
 cnt = 0
 answer = 0
+
+if mx < k :
+    for i in range(mx):
+        if arr[i] == 'H':
+            answer += 2
+        elif arr[i] == 'G':
+            answer+= 1
+
+        
+
+
 for i in range(0,mx-k):
     s = 0
 
