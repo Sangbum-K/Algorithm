@@ -5,10 +5,12 @@ start = grid[0][0]
 if start == 'W':
         step1 = 'B'
         step2 = 'W'
+        step3 = 'B'
     
 else:
     step1 = 'W'
     step2 = 'B'
+    step3 = 'W'
 
 cnt = 0
 
@@ -23,6 +25,8 @@ for i in range(1,R-2):
                 for y in range(j_,C-1):
                     if grid[x][y] == step2:
                         cnt+= 1
+if start == grid[R-1][C-1]:
+    cnt = 0
 
 print(cnt)
 
