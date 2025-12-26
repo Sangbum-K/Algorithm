@@ -48,7 +48,10 @@ for i in range(2,17):
             
 
 print(answer)
-print(answer_point[0]+1,answer_point[1]+1)
+if answer != 0 :
+    print(answer_point[0]+1,answer_point[1]+1)
+
+
 
 
         
