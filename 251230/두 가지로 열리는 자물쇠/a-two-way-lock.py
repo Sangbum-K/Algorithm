@@ -13,8 +13,11 @@ for i in com1:
         n = i + j
         if n <= 0:
             n = N + n
+
+
         l1.append(n)
     L1.append(l1)
+
 
 
 L2 = []
@@ -24,14 +27,22 @@ for i in com2:
         n = i + j
         if n <= 0:
             n = N + n
+
         l2.append(n)
     L2.append(l2)
+
 
 ans = 1
 for n1,n2 in zip(L1,L2):
     ans *= len(set(n1)&set(n2))
 
-print(250-ans)
+if N >= 5:
+    print(250-ans)
+else:
+    print(N**3)
+
+
+
 
     
         
