@@ -4,6 +4,7 @@ ability = list(map(int, input().split()))
 
 ans = sys.maxsize
 
+cnt = 0
 
 for i in range(len(ability)-1):
     for j in range(i+1,len(ability)):
@@ -19,17 +20,16 @@ for i in range(len(ability)-1):
                 team2 = ability[n]+ability[m]
 
                 team3 = sum(ability)-team1-team2
-                if team1 == team2 or team1 == team3 or team2 == team3:
-                    continue
 
-                Max_val = max(team1,team2,team3)
-                min_val = min(team1,team2,team3)
-                diff = abs(Max_val-min_val)
+                if team1 != team2 != team3:
+                    Max_val = max(team1,team2,team3)
+                    min_val = min(team1,team2,team3)
+                    diff = abs(Max_val-min_val)
+                    ans = min(ans,diff)
+                else:
+                    cnt+= 1
 
-
-                ans = min(ans,diff)
-
-if ans == 0:
+if cnt == 30:
     ans = -1
 print(ans)
                 
