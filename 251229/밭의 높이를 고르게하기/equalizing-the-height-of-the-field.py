@@ -8,7 +8,7 @@ ans = sys.maxsize
 for i in range(N-T+1):
     sum_val = 0
     for j in range(i,i+T):
-        print(j)
+
         sum_val+= abs(arr[j]-H)
     ans = min(ans,sum_val)
 print(ans)
