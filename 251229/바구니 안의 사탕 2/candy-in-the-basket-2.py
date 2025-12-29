@@ -9,12 +9,13 @@ for _ in range(N):
 
 arr = [0]*(max(pos)+1)
 for c,i in zip(candy,pos):
-    arr[i] = c
+    arr[i] += c
 
 ans = 0
 for i in range(K,len(arr)-K):
 
     box = arr[i-K:i+K+1]
+
     sum_val = sum(box)
 
     ans = max(ans,sum_val)
