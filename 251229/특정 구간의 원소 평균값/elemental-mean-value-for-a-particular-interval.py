@@ -13,7 +13,8 @@ for i in range(n):
             cnt+= 1
         
         avg = sum_val / cnt
-        if avg in arr:
+        arr_ = arr[i:j+1]
+        if avg in arr_:
             ans+= 1
 
 print(ans)
