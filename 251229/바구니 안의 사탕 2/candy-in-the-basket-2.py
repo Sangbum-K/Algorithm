@@ -12,6 +12,8 @@ for c,i in zip(candy,pos):
     arr[i] += c
 
 ans = 0
+if (2*K >= len(arr)):
+    ans = sum(arr)
 for i in range(K,len(arr)-K):
 
     box = arr[i-K:i+K+1]
