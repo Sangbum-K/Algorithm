@@ -13,7 +13,7 @@ for i in range(N):
             P_[j] = (P_[j]//2)
         
 
-        if B_ - P_[j] > 0:
+        if B_ - P_[j] >= 0:
             B_ = B_ - P_[j]
             cnt += 1
         else:
