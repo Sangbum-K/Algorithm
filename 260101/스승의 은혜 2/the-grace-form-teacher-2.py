@@ -6,6 +6,7 @@ ans = 0
 for i in range(N):
     B_ = B
     P_ = P.copy()
+    P_.sort()
     cnt = 0
     for j in range(N):
 
