@@ -5,7 +5,7 @@ end = max(item[1] for item in ranges)
 
 ans = 0
 
-for temp in range(start,end + 1):
+for temp in range(1,1001):
     efficiency = 0
     for i,j in ranges:
         if temp < i:
@@ -14,7 +14,6 @@ for temp in range(start,end + 1):
             efficiency += G
         elif j < temp:
             efficiency += H
-
 
     ans = max(ans,efficiency)
 print(ans)
