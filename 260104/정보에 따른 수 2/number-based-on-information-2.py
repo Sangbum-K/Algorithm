@@ -8,7 +8,7 @@ for _ in range(T):
     c.append(char)
     x.append(int(pos))
 
-arr = [0]*(b+1)
+arr = [0]*(max(x)+1)
 
 for aph,i in zip(c,x):
     arr[i] = aph
