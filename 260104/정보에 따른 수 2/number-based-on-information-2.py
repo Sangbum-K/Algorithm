@@ -19,7 +19,7 @@ for i in range(a,b+1):
     d1 = sys.maxsize
     d2 = sys.maxsize
     
-    for j in range(0,b+1):
+    for j in range(0,len(arr)):
 
         if arr[j] == 'S':
             d_s = abs(i-j)
@@ -30,7 +30,6 @@ for i in range(a,b+1):
             d2 = min(d2,d_n)
         
     if d1 <= d2:
-
         ans +=1
     
 
